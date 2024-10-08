@@ -2,8 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Illuminate\Database\Seeder;
+
+use App\Models\{
+    Project,
+    User
+};
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,5 +17,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory()->count(200)->create();
+
+        User::query()->inRandomOrder()->limit(10)->get()->each(function (User $user) {
+            Project::factory()->create(['created_by' => $user->id]);
+        });
     }
 }
