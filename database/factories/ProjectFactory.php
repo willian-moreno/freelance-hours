@@ -19,7 +19,7 @@ class ProjectFactory extends Factory
     {
         return [
             'title' => fake()->words(5, true),
-            'description' => fake()->randomHtml(),
+            'description' => fake()->realTextBetween(250, 1000),
             'ends_at' => fake()->dateTimeBetween('now', '+5 days'),
             'status' => fake()->randomElement(['open', 'closed']),
             'tech_stack' => fake()->randomElements([
