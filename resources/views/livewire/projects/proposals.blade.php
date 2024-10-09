@@ -1,5 +1,1 @@
-<div>
-    componente livewire projects.proposals
-
-    @dump($project)
-</div>
+<x-proposals :proposals="$project->proposals" />
