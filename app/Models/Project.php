@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Traits\Uuid;
+
 use Illuminate\Database\Eloquent\{
     Factories\HasFactory,
     Model
@@ -10,9 +12,9 @@ use Illuminate\Database\Eloquent\{
 class Project extends Model
 {
     /** @use HasFactory<\Database\Factories\ProjectFactory> */
-    use HasFactory;
+    use HasFactory, Uuid;
 
-    public function casts()
+    protected function casts()
     {
         return [
             'tech_stack' => 'array'

@@ -5,4 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProjectsController::class, 'index'])->name('projects.index');
 
-Route::get('/projects/{project}', [ProjectsController::class, 'details'])->name('projects.details');
+Route::get('/projects/{uuid}', [ProjectsController::class, 'details'])->name('projects.details');

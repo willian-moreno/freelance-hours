@@ -14,6 +14,7 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->uuid();
             $table->string('title');
             $table->text('description');
             $table->dateTime('ends_at');

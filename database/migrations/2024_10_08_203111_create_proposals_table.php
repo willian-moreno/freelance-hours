@@ -14,6 +14,7 @@ return new class extends Migration
     {
         Schema::create('proposals', function (Blueprint $table) {
             $table->id();
+            $table->uuid();
             $table->string('email');
             $table->unsignedSmallInteger('hours');
             $table->foreignIdFor(Project::class, 'project_id')->constrained('projects');

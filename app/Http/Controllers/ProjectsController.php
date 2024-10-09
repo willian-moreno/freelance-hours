@@ -12,8 +12,10 @@ class ProjectsController extends Controller
         return view('projects.index');
     }
 
-    public function details(Project $project)
+    public function details(Request $request)
     {
+        $project = Project::query()->where('uuid', $request->uuid)->first();
+
         return view('projects.details', compact('project'));
     }
 }

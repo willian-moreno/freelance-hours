@@ -3,7 +3,7 @@
 
     @foreach ($this->projects as $project)
         <li>
-            <a href={{ route('projects.details', $project) }}>
+            <a href={{ route('projects.details', $project->uuid) }}>
                 {{ $project->id }}. {{ $project->title }}
             </a>
         </li>

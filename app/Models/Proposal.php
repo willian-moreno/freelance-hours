@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Traits\Uuid;
+
 use Illuminate\Database\Eloquent\{
     Factories\HasFactory,
     Model
@@ -10,5 +12,5 @@ use Illuminate\Database\Eloquent\{
 class Proposal extends Model
 {
     /** @use HasFactory<\Database\Factories\ProposalFactory> */
-    use HasFactory;
+    use HasFactory, Uuid;
 }
