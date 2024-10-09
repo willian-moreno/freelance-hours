@@ -1,6 +1,9 @@
 <nav class="border-[#1E1E2C] border-2 w-full py-[18px]">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between">
-        <a class="text-white font-bold items-center flex gap-2" href="/">
+        <a
+            class="text-white font-bold items-center flex gap-2"
+            href="/"
+        >
             <x-ui.logo class="w-10" />
             <span class="text-xl">FreelanceHours</span>
         </a>
