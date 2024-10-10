@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\{
     Factories\HasFactory,
     Model
 };
+use Illuminate\Notifications\Notifiable;
 
 class Proposal extends Model
 {
     /** @use HasFactory<\Database\Factories\ProposalFactory> */
-    use HasFactory, Uuid;
+    use HasFactory, Notifiable, Uuid;
 
     /**
      * The attributes that are mass assignable.
