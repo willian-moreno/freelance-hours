@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Actions\ArrangePositions;
 use Illuminate\Database\Seeder;
 
 use App\Models\{
@@ -25,6 +26,8 @@ class DatabaseSeeder extends Seeder
             Proposal::factory()->count(random_int(4, 45))->create([
                 'project_id' => $project->id,
             ]);
+
+            ArrangePositions::run($project->id);
         });
     }
 }
