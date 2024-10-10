@@ -11,14 +11,14 @@ use Livewire\{
 
 class Index extends Component
 {
-    public function render()
-    {
-        return view('livewire.projects.index');
-    }
-
     #[Computed()]
     public function projects()
     {
-        return Project::query()->inRandomOrder()->get();
+        return Project::query()->get();
+    }
+
+    public function render()
+    {
+        return view('livewire.projects.index');
     }
 }
